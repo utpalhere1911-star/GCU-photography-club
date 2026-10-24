@@ -37,7 +37,7 @@ export default function ShutterScapeLogo({
         src={src}
         alt="ShutterScape — Photography Club of Girijananda Chowdhury University"
         fill
-        sizes={`${width}px`}
+        sizes={`${width * 2}px`}
         priority={priority}
         className="object-contain object-left"
       />
