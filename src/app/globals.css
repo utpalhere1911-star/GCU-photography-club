@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+:root {
+  --background: #08090a;
+  --surface: #111315;
+  --card: #17191c;
+  --border: #303338;
+  --foreground: #f5f5f3;
+  --secondary: #b5b8bc;
+  --muted: #858a91;
+  --accent: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #08090a;
+  color: #f5f5f3;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom smooth dark monochrome scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08090a;
+}
+::-webkit-scrollbar-thumb {
+  background: #25282c;
+  border-radius: 9999px;
+  border: 1px solid #303338;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b3f46;
+}
+
+/* Cinematic Monochrome Surfaces */
+.bg-surface {
+  background-color: #111315;
+}
+
+.bg-card-elevated {
+  background-color: #17191c;
+}
+
+.border-subtle {
+  border-color: #303338;
+}
+
+.text-primary-mono {
+  color: #f5f5f3;
+}
+
+.text-secondary-mono {
+  color: #b5b8bc;
+}
+
+.text-muted-mono {
+  color: #858a91;
+}
+
+/* Glass & Card styles */
+.glass-panel-mono {
+  background: rgba(17, 19, 21, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #303338;
+}
+
+.glass-pill-mono {
+  background: rgba(23, 25, 28, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #303338;
+}
+
+.font-handwriting {
+  font-family: var(--font-caveat), cursive, sans-serif;
+}
+
+/* ============================================================== */
+/* PREMIUM GLOWING BLACK & WHITE DESIGN SYSTEM (MONOCHROME PRO)   */
+/* ============================================================== */
+.bg-dashboard-base {
+  background-color: #060608;
+}
+
+.bg-dashboard-sidebar {
+  background-color: #0a0a0d;
+}
+
+.bg-dashboard-topbar {
+  background-color: rgba(10, 10, 13, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.bg-dashboard-card {
+  background-color: #101014;
+}
+
+.bg-dashboard-subcard {
+  background-color: #17171c;
+}
+
+.border-dashboard-subtle {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.border-dashboard-card {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.border-dashboard-hover {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.dashboard-nav-active {
+  background: #ffffff;
+  color: #050507;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.dashboard-nav-active svg {
+  color: #050507;
+}
+
+.dashboard-glow-accent {
+  box-shadow: 0 0 35px -5px rgba(255, 255, 255, 0.08);
+}
+
+.dashboard-glow-white {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+.dashboard-glow-subtle {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Smooth custom scrollbar for dashboard tables and modals */
+.dashboard-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.dashboard-scrollbar::-webkit-scrollbar-track {
+  background: #09090c;
+}
+.dashboard-scrollbar::-webkit-scrollbar-thumb {
+  background: #27272e;
+  border-radius: 9999px;
+}
+.dashboard-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #3f3f4a;
+}
+
