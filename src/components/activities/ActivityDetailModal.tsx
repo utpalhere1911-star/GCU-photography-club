@@ -227,10 +227,10 @@ export default function ActivityDetailModal({
 
                   {/* Metadata Row */}
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm text-[#B5B8BC]">
-                    <div className="flex items-center gap-1.5 font-mono">
-                      <Calendar className="w-4 h-4 text-white" />
+                    <div className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-[#F5F5F3] font-medium tracking-wide">
+                      <Calendar className="w-4 h-4 text-[#858A91] shrink-0" />
                       <span className="text-[#F5F5F3] font-semibold">
-                        {formatActivityDate(activity.startDate)}
+                        {formatActivityDate(activity.startDate, activity.endDate, { detailed: true })}
                       </span>
                     </div>
                     {activity.time && (

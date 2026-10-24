@@ -146,12 +146,13 @@ export default function PastActivitiesTimeline({
 
                       {/* Middle: Content & Metadata */}
                       <div className="flex-1 min-w-0 flex flex-col justify-center">
-                        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1.5">
-                          {/* Unambiguous DD / MM / YYYY display format */}
-                          <span className="font-mono text-[11px] sm:text-xs text-[#F5F5F3] font-semibold bg-[#111315] px-2 py-0.5 rounded border border-[#303338]">
-                            {formatActivityDate(activity.startDate)}
+                        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2">
+                          {/* Editorial activity date badge */}
+                          <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-medium text-[#E0E2E6] bg-[#111315] px-2.5 py-0.5 rounded-md border border-[#303338] tracking-wide">
+                            <Calendar className="w-3 h-3 text-[#858A91] shrink-0" />
+                            <span>{formatActivityDate(activity.startDate, activity.endDate)}</span>
                           </span>
-                          <span className="text-[10px] sm:text-[11px] font-semibold text-[#B5B8BC] tracking-wider uppercase px-2 sm:px-2.5 py-0.5 rounded-full bg-[#111315] border border-[#303338]">
+                          <span className="text-[10px] sm:text-[11px] font-semibold text-[#858A91] tracking-wider uppercase px-2 sm:px-2.5 py-0.5 rounded-full bg-[#111315] border border-[#303338]">
                             {activity.category}
                           </span>
                         </div>

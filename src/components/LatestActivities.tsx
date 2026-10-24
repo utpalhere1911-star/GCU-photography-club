@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Sparkles, Camera } from "lucide-react";
+import { ArrowRight, Sparkles, Camera, Calendar } from "lucide-react";
 import { Activity, formatActivityDate } from "@/data/activities";
 import {
   getStoredActivities,
@@ -125,9 +125,10 @@ export default function LatestActivities() {
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity pointer-events-none" />
 
-                  {/* Date pill overlay */}
-                  <div className="absolute top-2 left-2 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-mono text-[#D5D9DE] border border-[#303338]">
-                    {formatActivityDate(activity.startDate)}
+                  {/* Editorial date badge overlay */}
+                  <div className="absolute top-2.5 left-2.5 inline-flex items-center gap-1.5 bg-[#08090A]/90 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-medium tracking-wide text-[#E0E2E6] border border-[#303338] shadow-sm select-none">
+                    <Calendar className="w-3 h-3 text-[#858A91] shrink-0" />
+                    <span>{formatActivityDate(activity.startDate, activity.endDate)}</span>
                   </div>
                 </div>
 

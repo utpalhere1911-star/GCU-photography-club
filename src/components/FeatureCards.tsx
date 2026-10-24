@@ -291,10 +291,10 @@ export default function FeatureCards({ onOpenJoin }: FeatureCardsProps = {}) {
                       </h3>
 
                       <div className="mt-3 space-y-2 text-xs text-[#B5B8BC]">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-3.5 h-3.5 text-[#858A91]" />
-                          <span className="font-mono">
-                            {formatActivityDate(upcomingActivity.startDate)}
+                        <div className="inline-flex items-center gap-2 text-xs text-[#E0E2E6] font-medium tracking-wide">
+                          <Calendar className="w-3.5 h-3.5 text-[#858A91] shrink-0" />
+                          <span>
+                            {formatActivityDate(upcomingActivity.startDate, upcomingActivity.endDate)}
                           </span>
                         </div>
                         <div className="flex items-center gap-2">

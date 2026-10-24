@@ -680,7 +680,7 @@ export default function DashboardPage() {
                               </span>
                             </td>
                             <td className="py-3.5 px-4 whitespace-nowrap text-neutral-300 font-mono text-[11px]">
-                              <div>{formatActivityDate(act.startDate)}</div>
+                              <div>{formatActivityDate(act.startDate, act.endDate)}</div>
                               {act.time && (
                                 <div className="text-[10px] text-neutral-500">
                                   {act.time}

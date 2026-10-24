@@ -14,17 +14,21 @@ export default function Footer() {
         {/* Main Footer Row */}
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 pb-6 border-b border-[#303338]/80">
           
-          {/* Brand & Club Tagline */}
-          <div className="flex items-center gap-3.5 shrink-0">
-            <ShutterScapeLogo height={36} />
-            <div className="flex flex-col text-left border-l border-[#303338] pl-3 py-0.5">
-              <span className="text-base sm:text-lg font-bold tracking-tight text-[#F5F5F3] leading-snug">
-                ShutterScape
-              </span>
-              <span className="text-[11px] sm:text-xs font-medium tracking-normal text-[#858A91] mt-0.5 leading-snug">
-                Photographic Club · GCU
-              </span>
-            </div>
+          {/* Brand & Club Descriptor */}
+          <div className="flex flex-col items-start gap-1.5 shrink-0">
+            <Link
+              href="/"
+              className="inline-flex items-center rounded-md focus:outline-none focus-visible:ring-1 focus-visible:ring-white/70 group"
+              aria-label="ShutterScape Home"
+            >
+              <ShutterScapeLogo
+                height={36}
+                className="transition-opacity group-hover:opacity-90"
+              />
+            </Link>
+            <span className="text-[11px] sm:text-xs font-medium tracking-normal text-[#858A91] leading-tight select-none whitespace-nowrap">
+              Photography Club GCU
+            </span>
           </div>
 
           {/* Quick Links */}

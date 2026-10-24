@@ -76,9 +76,9 @@ export default function UpcomingSection({
 
               {/* Date, Time & Venue Meta */}
               <div className="mt-2.5 sm:mt-3 flex flex-wrap items-center gap-x-3.5 gap-y-1.5 text-xs text-[#B5B8BC]">
-                <div className="flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-white" />
-                  <span className="font-mono">{formatActivityDate(featured.startDate)}</span>
+                <div className="inline-flex items-center gap-1.5 text-[#E0E2E6] font-medium tracking-wide">
+                  <Calendar className="w-3.5 h-3.5 text-[#858A91] shrink-0" />
+                  <span>{formatActivityDate(featured.startDate, featured.endDate)}</span>
                 </div>
                 {featured.time && (
                   <div className="flex items-center gap-1.5">
@@ -172,8 +172,11 @@ export default function UpcomingSection({
                     {item.shortDescription}
                   </p>
                 </div>
-                <div className="text-[11px] text-[#858A91] flex items-center justify-between pt-2">
-                  <span className="font-mono">{formatActivityDate(item.startDate)}</span>
+                <div className="text-[11px] text-[#858A91] flex items-center justify-between pt-2.5 mt-2 border-t border-[#303338]/50">
+                  <div className="inline-flex items-center gap-1.5 text-[#D5D9DE] font-medium tracking-wide">
+                    <Calendar className="w-3 h-3 text-[#858A91] shrink-0" />
+                    <span>{formatActivityDate(item.startDate, item.endDate)}</span>
+                  </div>
                   <span className="text-[#F5F5F3] group-hover:translate-x-0.5 transition-transform flex items-center gap-1 font-medium">
                     Details <ArrowRight className="w-3 h-3" />
                   </span>
